@@ -1,3 +1,23 @@
 body {
-  background-color: red;
+  background-color: white;
 }
+
+/* .box1 {
+  float: left;
+  width: 40%;
+  lenth: 30%;
+  padding: 10px;
+  margin: 20px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px;
+}
+
+.box2 {
+  float: left;
+  width: 40%;
+  lenth: 30%;
+  padding: 10px;
+  margin: 20px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px;
+} */

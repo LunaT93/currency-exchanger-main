@@ -5,18 +5,33 @@
 </head>
 <body>
   <div class="container">
-    <h1>Convert USD to Anything!</h1>
+    <h1>Convert Anything to Anything!</h1>
     <p>To get the exchange rate, please select the foregin currency.</p>
     <pre>
       USD to CZK
       USD to EUR
     </pre>
     <form>
-      <label for="USD">Enter a currency:</label>
-      <input id="USD" type="text" name="USD">
-      <label for="Currency2">Enter another currency:</label>
-      <input id="Currency2" type="text" name="Currency2">
-      <button type="submit" class="btn-success" id="convert">Convert!</button>
+      <div class = "card">
+        <div class = "card-title"></div>
+          <label for="USD">Enter a currency:</label>
+          <select name="USD" id="USD">
+            <option value="USD">USD</option>
+            <option value="AED">AED</option>
+            <option value="AFN">AFN</option>
+            <option value="ALL">ALL</option>
+          </select>
+          <label for="amt1">Enter an Amount (not working yet):</label>
+          <input id="amt1" type="text" name="amt1">
+        <div class = "card-title"></div>
+      </div>
+      <div class = "card">
+        <div class = "card-title">
+          <label for="Currency2">Enter another currency:</label>
+          <input id="Currency2" type="text" name="Currency2">
+          <button type="submit" class="btn-success" id="convert">Convert!</button>
+        </div>
+      </div>
     </form>
     <p id="showResponse"></p>
   </div>
