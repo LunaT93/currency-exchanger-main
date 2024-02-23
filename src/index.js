@@ -7,7 +7,7 @@ import CurrencyExchanger from './currency-exchanger.js';
 
 async function getExchangeRate(Currency) {
   const response = await CurrencyExchanger.getExchangeRate(Currency);
-  if (response.main) {
+  if (response.result === "success") {
     printElements(response, Currency);
   } else {
     printError(response, Currency);
@@ -17,12 +17,12 @@ async function getExchangeRate(Currency) {
 // UI Logic
 
 function printElements(response, Currency) {
-  document.querySelector('#showResponse').innerText = `1 ${Currency} is ${response.main.CZK} Units`;
+  document.querySelector('#showResponse').innerText = `1 ${Currency} is ${response.conversion_rates.CZK} Units`;
 }
 
 function printError(error, Currency) {
   document.querySelector('#showResponse').innerText = `There was an error accessing the data for ${Currency}: 
-  ${error}.`;
+  ${error.message}.`;
 }
 
 function handleFormSubmission(event) {
